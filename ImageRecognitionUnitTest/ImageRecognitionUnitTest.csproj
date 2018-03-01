@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0-beta3\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0-beta3\build\net45\MSTest.TestAdapter.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DCDAA84-45AA-45D6-AA10-0E66496572D7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImageRecognitionUnitTest</RootNamespace>
+    <AssemblyName>ImageRecognitionUnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord, Version=3.5.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.3.5.0\lib\net45\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math, Version=3.5.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Math.3.5.0\lib\net45\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Math.3.5.0\lib\net45\Accord.Math.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Neuro, Version=3.5.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Neuro.3.5.0\lib\net45\Accord.Neuro.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0-beta3\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0-beta3\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ImageRecognition\ImageRecognition.csproj">
+      <Project>{0d41dea7-ca01-43c6-ab8a-7df58d858b5c}</Project>
+      <Name>ImageRecognition</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="testRes\negativeTestData\1 %28120%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28121%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28122%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28126%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28127%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28132%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28133%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28134%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28135%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28136%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28137%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28138%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28139%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28142%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28143%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28146%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28147%29 - Copy.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28147%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28148%29 - Copy.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28148%29.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28149%29 - Copy.jpeg" />
+    <Content Include="testRes\negativeTestData\1 %28149%29.jpeg" />
+    <Content Include="testRes\negativeTestData\2 %281%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %2810%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %2811%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %2812%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %2813%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %2814%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %2815%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %2816%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %2817%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %2818%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %282%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %283%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %284%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %285%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %286%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %287%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %288%29.jpg" />
+    <Content Include="testRes\negativeTestData\2 %289%29.jpg" />
+    <Content Include="testRes\positiveTestData\1 %28120%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28121%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28122%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28126%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28127%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28132%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28133%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28134%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28135%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28136%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28137%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28138%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28139%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28142%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28143%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28146%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28147%29 - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28147%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28148%29 - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28148%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28149%29 - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28149%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28150%29 - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28151%29 - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28152%29 - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28152%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28153%29 - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28154%29 - Copy - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28154%29 - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28155%29 - Copy - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28156%29 - Copy - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28168%29 - Copy - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28168%29 - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28168%29.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28169%29 - Copy - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28169%29 - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28170%29 - Copy - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28170%29 - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28171%29 - Copy - Copy.jpeg" />
+    <Content Include="testRes\positiveTestData\1 %28171%29 - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28120%29.jpeg" />
+    <Content Include="testRes\training\1 %28121%29.jpeg" />
+    <Content Include="testRes\training\1 %28122%29.jpeg" />
+    <Content Include="testRes\training\1 %28126%29.jpeg" />
+    <Content Include="testRes\training\1 %28127%29.jpeg" />
+    <Content Include="testRes\training\1 %28132%29.jpeg" />
+    <Content Include="testRes\training\1 %28133%29.jpeg" />
+    <Content Include="testRes\training\1 %28134%29.jpeg" />
+    <Content Include="testRes\training\1 %28135%29.jpeg" />
+    <Content Include="testRes\training\1 %28136%29.jpeg" />
+    <Content Include="testRes\training\1 %28137%29.jpeg" />
+    <Content Include="testRes\training\1 %28138%29.jpeg" />
+    <Content Include="testRes\training\1 %28139%29.jpeg" />
+    <Content Include="testRes\training\1 %28142%29.jpeg" />
+    <Content Include="testRes\training\1 %28143%29.jpeg" />
+    <Content Include="testRes\training\1 %28146%29.jpeg" />
+    <Content Include="testRes\training\1 %28147%29 - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28147%29.jpeg" />
+    <Content Include="testRes\training\1 %28148%29 - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28148%29.jpeg" />
+    <Content Include="testRes\training\1 %28149%29 - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28149%29.jpeg" />
+    <Content Include="testRes\training\1 %28150%29 - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28151%29 - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28152%29 - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28152%29.jpeg" />
+    <Content Include="testRes\training\1 %28153%29 - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28154%29 - Copy - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28154%29 - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28155%29 - Copy - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28156%29 - Copy - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28168%29 - Copy - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28168%29 - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28168%29.jpeg" />
+    <Content Include="testRes\training\1 %28169%29 - Copy - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28169%29 - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28170%29 - Copy - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28170%29 - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28171%29 - Copy - Copy.jpeg" />
+    <Content Include="testRes\training\1 %28171%29 - Copy.jpeg" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0-beta3\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0-beta3\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0-beta3\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0-beta3\build\net45\MSTest.TestAdapter.targets'))" />
+    <Error Condition="!Exists('..\packages\Accord.3.7.2-alpha\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.3.7.2-alpha\build\Accord.targets'))" />
+    <Error Condition="!Exists('..\packages\Accord.3.5.0\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.3.5.0\build\Accord.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0-beta3\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0-beta3\build\net45\MSTest.TestAdapter.targets')" />
+  <Import Project="..\packages\Accord.3.7.2-alpha\build\Accord.targets" Condition="Exists('..\packages\Accord.3.7.2-alpha\build\Accord.targets')" />
+  <Import Project="..\packages\Accord.3.5.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.5.0\build\Accord.targets')" />
+</Project>
