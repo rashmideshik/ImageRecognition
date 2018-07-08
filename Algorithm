@@ -1,0 +1,2 @@
+#Self Organizing Map
+A self- organizing map is a clustering technique to help to uncover categories in large datasets. It is a special type of unsupervised neural networks, where neurons are arranged in a single and 2-dimentional grid, which are arranged in the shape of rectangles or hexagons. 
